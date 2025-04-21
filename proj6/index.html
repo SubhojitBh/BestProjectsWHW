@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Key pressed</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div style="padding: 5px;">
+        <h3 id="key">No key was pressed.</h3>
+        <p id="keyCode">The key has KeyCode: XX.</p>
+    </div>
+</body>
+<script>
+    window.addEventListener('keydown', (e) => {
+        console.log("hi")
+        document.querySelector('#key').innerHTML = `${e.key == " " ? "Space" : e.key} was pressed.`
+        document.querySelector('#keyCode').innerHTML = `The key has KeyCode: ${e.keyCode}.`
+    })
+</script>
+</html>
